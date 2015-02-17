@@ -685,11 +685,7 @@ CGFloat easeOutValue(CGFloat value) {
 }
 
 - (void)hideWithFadeOutDuration:(CGFloat)duration {
-    [UIView animateWithDuration:duration animations:^{
-        self.alpha = 0;
-    } completion:^(BOOL finished){
-		[self finishIntroductionAndRemoveSelf];
-	}];
+    [self finishIntroductionAndRemoveSelf];
 }
 
 - (void)setCurrentPageIndex:(NSUInteger)currentPageIndex {
